@@ -37,17 +37,24 @@ public class Main {
 				altura=std.nextDouble();
 				if(altura<=0)
 					System.out.println("Valor invalido! Favor digitar um valor positivo:");
-				}
-				while(altura<=0);
-			System.out.print("Peso: ");
-			peso=std.nextDouble();
+			}
+			while(altura<=0);
+			do{
+				System.out.print("Peso: ");
+				peso=std.nextDouble();
+				if(peso<=0)
+					System.out.println("Valor invalido! Favor digitar um valor positivo:");
+			}
+			while(peso<=0);
+			
 			atleta[i]=new Atleta(nome, peso, altura, sexo);
-		}
+	}
+			
 		
-		System.out.print(relatorio(atleta));
 		
-		
-		std.close();
+	System.out.print(relatorio(atleta));
+	
+	std.close();
 	}
 	
 	public static double pesoMedio(Atleta [] atleta) {
